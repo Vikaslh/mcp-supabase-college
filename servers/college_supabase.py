@@ -304,4 +304,5 @@ def get_subject_stats(subject_name: str) -> str:
         return f"Error: {str(e)}"
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="streamable-http")
+    
