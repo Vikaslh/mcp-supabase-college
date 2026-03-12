@@ -7,7 +7,11 @@ from supabase import create_client, Client
 load_dotenv()
 
 # Initialize FastMCP server
-mcp = FastMCP("CollegeDatabaseSupabase")
+mcp = FastMCP(
+    "CollegeDatabaseSupabase",
+    host="0.0.0.0",
+    port=int(os.environ.get("PORT", 10000))
+)
 
 # Supabase Setup
 url: str = os.environ.get("SUPABASE_URL")
